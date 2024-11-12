@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: radio-lira-chatbot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run chatbot.py
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false 
