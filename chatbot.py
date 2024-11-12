@@ -52,3 +52,7 @@ if prompt := st.chat_input("Escribe tu mensaje aquí"):
         
     # Agrega respuesta al historial
     st.session_state.messages.append({"role": "assistant", "content": response.text})
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 8501))
+    st.run(port=port)
